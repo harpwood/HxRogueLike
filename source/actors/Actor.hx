@@ -2,10 +2,10 @@ package actors;
 
 import data.C;
 import data.M;
-import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxDirectionFlags;
 
 /**
  * Contains logic for all in game characters, both player and enemies
@@ -76,8 +76,8 @@ class Actor extends FlxSprite
 		animation.play("idle");
 
 		// facing
-		setFacingFlip(FlxObject.LEFT, false, false);
-		setFacingFlip(FlxObject.RIGHT, true, false);
+		setFacingFlip(FlxDirectionFlags.LEFT, false, false);
+		setFacingFlip(FlxDirectionFlags.RIGHT, true, false);
 
 		// reposition to be inside tile without messing with x and y
 		width = C.TILE_SIZE;
@@ -239,11 +239,11 @@ class Actor extends FlxSprite
 		// var dir = nested - destNested;
 		if (dir < 0)
 		{
-			facing = FlxObject.LEFT;
+			facing = FlxDirectionFlags.LEFT;
 		}
 		else if (dir > 0)
 		{
-			facing = FlxObject.RIGHT;
+			facing = FlxDirectionFlags.RIGHT;
 		}
 	}
 }

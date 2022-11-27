@@ -1,7 +1,7 @@
 package actors;
 
 import data.C;
-import flixel.FlxObject;
+import flixel.util.FlxDirectionFlags;
 
 /**
  * Player actor Specific features
@@ -28,8 +28,8 @@ class Player extends Actor
 		animation.add("dead", [15, 16, 17, 18], 8, true);
 		animation.play("idle");
 
-		setFacingFlip(FlxObject.LEFT, false, false);
-		setFacingFlip(FlxObject.RIGHT, true, false);
+		setFacingFlip(FlxDirectionFlags.LEFT, false, false);
+		setFacingFlip(FlxDirectionFlags.RIGHT, true, false);
 
 		width = C.TILE_SIZE;
 		height = C.TILE_SIZE;

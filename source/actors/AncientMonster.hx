@@ -1,7 +1,7 @@
 package actors;
 
 import data.C;
-import flixel.FlxObject;
+import flixel.util.FlxDirectionFlags;
 
 /**
  * AncientMonster actor Specific features
@@ -27,8 +27,8 @@ class AncientMonster extends Actor
 		animation.add("win", [5, 6, 7, 8, 9], 8);
 		animation.play("idle");
 
-		setFacingFlip(FlxObject.LEFT, false, false);
-		setFacingFlip(FlxObject.RIGHT, true, false);
+		setFacingFlip(FlxDirectionFlags.LEFT, false, false);
+		setFacingFlip(FlxDirectionFlags.RIGHT, true, false);
 
 		width = C.TILE_SIZE;
 		height = C.TILE_SIZE;
